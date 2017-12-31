@@ -1,0 +1,207 @@
+/* Timeline */
+@media (min-width: 768px) {
+  .timeline {
+    width: 750px;
+  }
+}
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.timeline:before {
+  content: "";
+  bottom: 0;
+  top: 0;
+  left: 50%;
+  position: absolute;
+  background-color: #eee;
+  width: 3px;
+  margin-left: -1.5px;
+}
+
+.timeline>li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline>li:before, .timeline>li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline>li:after {
+  clear: both;
+}
+
+/* Timeline Token */
+.timeline-token {
+  color: white;
+  background-color: #5C4B51;
+  position: absolute;
+  left: 50%;
+  top: 9px;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
+  font-size: 1.4em;
+  text-align: center;
+  margin-left: -20px;
+  border-radius: 50%;
+}
+
+/* Timeline Panel */
+.timeline-panel {
+  float: left;
+  width: 43%;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline-panel:before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+}
+
+.timeline-panel:after {
+  position: absolute;
+  top: 14px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #5C4B51;
+  border-right: 0 solid #5C4B51;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+.timeline-panel-title {
+  color: white;
+  background-color: #5C4B51;
+  padding: 11px;
+  font-weight: 500;
+  margin: -20px -20px 0 -20px;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 1px 1px #5C4B51;
+}
+
+.timeline-event-right>.timeline-panel {
+  float: right;
+}
+
+.timeline-event-right>.timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline-event-right>.timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+/* RESPONSIVE */
+@media(max-width: 767px) {
+  .timeline:before {
+    left: 40px;
+  }
+  .timeline-panel {
+    width: calc(100% - 90px);
+    float: right;
+  }
+  .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+  .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+  .timeline-token {
+    left: 21px;
+    margin-left: 0;
+    top: 8px;
+  }
+}
+
+/* Event Colors */
+
+/* Red */
+.timeline-event-red>.timeline-token, .timeline-event-red>.timeline-panel>.timeline-panel-title {
+  background-color: #F06060;
+  box-shadow: 0 1px 1px #F06060;
+}
+
+.timeline-event-red>.timeline-panel:after {
+  border-left-color: #F06060;
+  border-right-color: #F06060;
+}
+
+/* Yellow */
+.timeline-event-yellow>.timeline-token, .timeline-event-yellow>.timeline-panel>.timeline-panel-title {
+  background-color: #F2E97E;
+  box-shadow: 0 1px 1px #F2E97E;
+}
+
+.timeline-event-yellow>.timeline-panel:after {
+  border-left-color: #F2E97E;
+  border-right-color: #F2E97E;
+}
+
+/* Orange */
+.timeline-event-orange>.timeline-token, .timeline-event-orange>.timeline-panel>.timeline-panel-title {
+  background-color: #F39C5C;
+  box-shadow: 0 1px 1px #F39C5C;
+}
+
+.timeline-event-orange>.timeline-panel:after {
+  border-left-color: #F39C5C;
+  border-right-color: #F39C5C;
+}
+
+/* Blue */
+.timeline-event-blue>.timeline-token, .timeline-event-blue>.timeline-panel>.timeline-panel-title {
+  background-color: #6ACFF1;
+  box-shadow: 0 1px 1px #6ACFF1;
+}
+
+.timeline-event-blue>.timeline-panel:after {
+  border-left-color: #6ACFF1;
+  border-right-color: #6ACFF1;
+}
+
+/* Green */
+.timeline-event-green>.timeline-token, .timeline-event-green>.timeline-panel>.timeline-panel-title {
+  background-color: #82F15D;
+  box-shadow: 0 1px 1px #82F15D;
+}
+
+.timeline-event-green>.timeline-panel:after {
+  border-left-color: #82F15D;
+  border-right-color: #82F15D;
+}
